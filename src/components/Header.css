@@ -1,0 +1,81 @@
+#brand{
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+  
+  #brand span{
+    font-weight: bolder;
+    color: rgb(15, 113, 233);
+  } 
+
+  .navbar{
+    height: 75px;
+    border-bottom: 1px solid rgb(210, 205, 205);
+    box-shadow: 2 -1 1 2 gray;
+    
+  }
+
+  #brandName{
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(6, 6, 103);
+    padding-bottom: 20px;
+  }
+
+  .search{
+    width: 150px;
+    border: none;
+    background-color: whitesmoke ;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+  }
+
+  .search:focus{
+    outline: none !important;
+  }
+  
+  .form-input{
+    border: 1px rgb(222, 217, 217) solid;
+    box-shadow: 0px 0px 1px 1px grey;
+    padding: 10px 10px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+   
+  }
+  
+  .searchSpace{
+    padding-bottom: 15px;
+  }
+  
+  .searchSpace span{
+    padding: 10px 10px 10px 30px;
+
+  }
+  
+  .searchSpace i{
+    font-size: larger;
+    padding-right: 20px;
+    color: gray;
+  }
+
+  .rightN{
+    margin: 10px 20px;
+    padding-bottom: 10px;
+  }
+  
+  .rightN svg{
+    margin-right: 20px;
+  }
+  .rightN .svg1{
+    margin-right: 0px;
+  }
+  
+  .noBorder{
+    border: none;
+    background-color: white;
+  }
+  
