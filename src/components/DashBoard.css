@@ -113,48 +113,47 @@
     color: rgb(5, 5, 85);
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-}
+/* -----------------dropdown----------------- */
 
-.dropdown-container {
-   position: relative;
-   border-radius: 5px;
-}
-.dropdown-container .fa {
-  position: absolute;
-  right:0px;
-  top: 12px;
-  font-size: 16px;
-}
-
-
-
-select option{
-    padding: 10px 10px;
-}
-
-.dropdownItem{
-    padding: 10px;
-    margin: 10px 10px;
-}
-
-.form-group select{
-    width: 130px;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin-left: 1px;
+.dropdown{
+    padding: 0px 0px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    background-color: whitesmoke;
     box-shadow: none !important;
-    background-color: rgba(188, 188, 188, 0.659);
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(5, 5, 85);
 }
 
-.form-group select::selection{
-    background-color: rgb(145, 141, 141);
+
+.dropdown select{
+    padding: 5px 10px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    /* box-shadow: none !important; */
+    font-weight: bold;
+    color: rgb(80, 80, 93);
+}
+
+.dropdown select option{
+    font-weight: 600;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+/* -------------Progress bars-------------- */
+.progress{
+    width: 120px;
+    height: 5px;
+    margin: 7px 0px 0px 15px;
+}
+
+
+.floatR{
+    margin: 4px 0px ;
+    display: flex;
+}
+
+.floatR h6{
+    font-size: 13px;
 }

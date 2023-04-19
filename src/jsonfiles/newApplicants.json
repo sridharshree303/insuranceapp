@@ -1,0 +1,100 @@
+[
+    {
+        "Policy Owner":"sridhar",
+        "Life assurred":"tejasri",
+        "Prd type":"Carona covach",
+        "Appplication No":"11001",
+        "Date":"10-04-2023",
+        "SA"	: "1000000",
+        "Status" : "UW"
+    },
+    
+    {
+        "Policy Owner":"sri",
+        "Life assurred":"teja",
+        "Prd type":"Vehicle Protect",
+        "Appplication No":"11002",
+        "Date":"11-04-2023",
+        "SA"	: "100002",
+        "Status" : "UW"
+    },
+    
+    
+    
+    {
+        "Policy Owner":"Jodha",
+        "Life assurred":"Akbar",
+        "Prd type":"Life protect",
+        "Appplication No":"11003",
+        "Date":"12-02-2023",
+        "SA"	: "100003",
+        "Status" : "UW"
+    },
+    {
+        "Policy Owner":"John",
+        "Life assurred":"Lucy",
+        "Prd type":"Life protect",
+        "Appplication No":"11004",
+        "Date":"12-1-2023",
+        "SA"	: "100004",
+        "Status" : "UW"
+    },
+    {
+        "Policy Owner":"Naresh",
+        "Life assurred":"Suresh",
+        "Prd type":"Carona covach",
+        "Appplication No":"11005",
+        "Date":"21-01-2023",
+        "SA"	: "100005",
+        "Status" : "UW"
+    },
+    {
+        "Policy Owner":"Raghu",
+        "Life assurred":"Janaki",
+        "Prd type":"Pet Protect",
+        "Appplication No":"11006",
+        "Date":"12-01-2023",
+        "SA"	: "100006",
+        "Status" : "UW"
+    },
+    
+    {
+        "Policy Owner":"Radha",
+        "Life assurred":"Shyam",
+        "Prd type":"Life protect",
+        "Appplication No":"11007",
+        "Date":"12-03-2023",
+        "SA"	: "100007",
+        "Status" : "UW"
+    },
+    
+    {
+        "Policy Owner":"Sai",
+        "Life assurred":"Ram",
+        "Prd type":"Carona covach",
+        "Appplication No":"11008",
+        "Date":"12-02-2023",
+        "SA"	: "100008",
+        "Status" : "UW"
+    },
+    
+    {
+        "Policy Owner":"Vidhya",
+        "Life assurred":"Glory",
+        "Prd type":"Pet Protect",
+        "Appplication No":"11009",
+        "Date":"22-03-2023",
+        "SA"	: "100009",
+        "Status" : "UW"
+    },
+    {
+        "Policy Owner":"Indra",
+        "Life assurred":"Charan",
+        "Prd type":"Vehicle Protect",
+        "Appplication No":"11010",
+        "Date":"11-04-2023",
+        "SA"	: "100010",
+        "Status" : "UW"
+    }
+    
+    ]
