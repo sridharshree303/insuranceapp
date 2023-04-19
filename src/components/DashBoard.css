@@ -23,10 +23,22 @@
     color: #17a2cd;
 }
 
+#count1 svg{
+    margin: 0px 0px 5px 20px;
+    width: 35px;
+    height: 35px;
+}
+
 #count2{
     font-weight: bold;
     font-size: 45px;
     color: #4B61D1;
+}
+
+#count2 svg{
+    margin: 0px 0px 5px 20px;
+    width: 35px;
+    height: 35px;
 }
 
 #count3{
@@ -35,10 +47,22 @@
     color: rgb(20, 180, 180);
 }
 
+#count3 svg{
+    margin: 0px 0px 5px 20px;
+    width: 35px;
+    height: 35px;
+}
+
 #count4{
     font-weight: bold;
     font-size: 45px;
     color: rgba(255, 166, 0, 0.89);
+}
+
+#count4 svg{
+    margin: 0px 0px 5px 20px;
+    width: 35px;
+    height: 35px;
 }
 
 #countName{
@@ -58,7 +82,6 @@
     top: 25px;
 }
 
-
 .arrowtwo{
     background-color: white;
     border: 1px solid white;
@@ -66,7 +89,7 @@
     height: 40px;
 }
 
-.sellHeader{
+.headertwo{
     margin-top: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -148,12 +171,68 @@
     margin: 7px 0px 0px 15px;
 }
 
-
 .floatR{
     margin: 4px 0px ;
     display: flex;
 }
 
 .floatR h6{
-    font-size: 13px;
+    font-size: 14px;
+}
+
+/* -------------------meeting scheduler-------------------- */
+.date{
+    padding-right: 30px;
+}
+
+.input-field{
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0.7rem;
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    background-color: rgb(241, 236, 236);
+    border: none;
+    background-clip: padding-box;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background-repeat:  no-repeat;
+    width: 15px;
+    height: 15px;
+    /* border-width: thin */
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 66%;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+    position: relative;
+    left: 10%;
+}
+input::-webkit-datetime-edit {
+    position: relative;
+    left: 10%;
+}
+
+.dateCard{
+    margin: 10px 0px;
+}
+
+.dateCard .card{
+    width: 14%;
+    margin: 0px 6px 0px 0px;
+    display: inline-block;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
 }
