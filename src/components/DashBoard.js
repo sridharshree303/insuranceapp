@@ -1,10 +1,11 @@
 import React from 'react';
 import './DashBoard.css';
+import Table from 'react-bootstrap/Table';
 
 const DashBoard = () => {
     return (
         <div className='row dashContent'>
-
+            {/* ------------ Left Layout ------------------- */}
             <h6 className='col-12 pageHeader'>DashBoard</h6>
             <div className='col-8'>
                 {/* ------- statics cards ---------- */}
@@ -36,11 +37,62 @@ const DashBoard = () => {
 
                 {/* ---------------View new Applicants-------------------- */}
                 <div className='row px-2'>
-                    <div className='sizing card card-body'>
-                            <h3>Display New Appplicant Data</h3>
+                    <div className='sizing3 row card card-body'>
+                        <div className='float row'>
+                            <h3 className='applicantHeader col-5 mt-1'>18 New Applicants</h3>
+                            <button className='applicantHeader2 col-2 offset-3 right noBorder  right'>View All</button>
+                            {/* -------dropdown--------- */}
+                            <div className="col-2">
+                                <div className="form-group dropdown-container">
+                                    <select name="" id="" className="drop form-control ">
+                                        <option className='dropdownItem' defaultValue="-1">All policies </option>
+                                        <option className='dropdownItem' value="1">Health</option>
+                                        <option className='dropdownItem' value="1">Document</option>
+                                        <option className='dropdownItem' value="1">Gallery</option>
+                                    </select>
+                                    <i className="fa fa-angle-down "></i>
+                                </div>
+                            </div>
+
+                            {/* <p>New Applicants Data ---- View All action ------ Dropdown for policies </p> */}
+                        </div>
+                        <div>
+                            <Table className='table table-hover' striped hover size="md">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>Lockwood</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            {/* ----------------- Right layout --------------------------------- */}
             <div className='col-4'>
                 <div className='sizing2 card sellBottom'>
                     <h6 className="sellHeader">Top Selling Products</h6>

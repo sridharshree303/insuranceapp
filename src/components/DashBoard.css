@@ -87,3 +87,74 @@
     padding-left: 30px;
     padding-top: 10px;
 }
+
+/* ------------------Applicant table section ---------------------- */
+
+.sizing3{
+    margin: 20px 30px 0px 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+.applicantHeader{
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(5, 5, 85);
+}
+
+.applicantHeader2{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(5, 5, 85);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.dropdown-container {
+   position: relative;
+   border-radius: 5px;
+}
+.dropdown-container .fa {
+  position: absolute;
+  right:0px;
+  top: 12px;
+  font-size: 16px;
+}
+
+
+
+select option{
+    padding: 10px 10px;
+}
+
+.dropdownItem{
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.form-group select{
+    width: 130px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-left: 1px;
+    box-shadow: none !important;
+    background-color: rgba(188, 188, 188, 0.659);
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(5, 5, 85);
+}
+
+.form-group select::selection{
+    background-color: rgb(145, 141, 141);
+}
