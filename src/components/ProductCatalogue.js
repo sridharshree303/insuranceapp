@@ -26,11 +26,11 @@ const ProductCatalogue = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Send Wishes
       </Button>
 
       {show ?
-        <Modal show={show} onHide={handleClose}>
+        <Modal size='lg' show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
@@ -65,7 +65,7 @@ const ProductCatalogue = () => {
       }
 
       {show2 ?
-        <Modal show={show2} onHide={handleClose2}>
+        <Modal centered size='xl bottom' show={show2} onHide={handleClose2}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>

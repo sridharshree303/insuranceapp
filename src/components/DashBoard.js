@@ -1,6 +1,7 @@
 import React from 'react';
 import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
+import ProductCatalogue from './ProductCatalogue';
 
 const DashBoard = () => {
 
@@ -150,7 +151,7 @@ const DashBoard = () => {
                     </div>
                 </div>
                 {/* -------------------meeting Calender------------------ */}
-                <div className='sizing2 card pt-4 pb-3 '>
+                <div className='sizing2 card pt-3 pb-3 '>
                     <div className='row'>
                         <div className='col-6'><h6 className="headertwo">Today's Schedule</h6></div>
                         <div className='col-6 date '>
@@ -158,7 +159,7 @@ const DashBoard = () => {
                         </div>
                     </div>
 
-                    <div className='row dateCard pt-1 pb-1'>
+                    <div className='row dateCard pt-1 pb-1 '>
                         <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
                         <div className='col-2 card pt-1 mx-1'>03 <br /> Tue</div>
                         <div className='col-2 card pt-1 mx-1'>04 <br /> Wed</div>
@@ -209,6 +210,19 @@ const DashBoard = () => {
                                 </svg>
                             </div>
                         </div>
+                    </div>
+                </div>
+                {/* -----------------Todays events------------------------ */}
+                <div className='sizing4 card pt-3 pb-3 '>
+                    <div className="row">
+                        <div className='col-9'><h6 className="headertwo">Today's Events</h6></div>
+                        <div className='col-3 right px-5'><i className="fa fa-birthday-cake" aria-hidden="true"></i></div>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+                        <ProductCatalogue/>
                     </div>
                 </div>
             </div>
