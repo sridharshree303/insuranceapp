@@ -4,18 +4,15 @@ import Table from 'react-bootstrap/Table';
 
 const DashBoard = () => {
 
-    function datePicker() {
-        ('#picker').datetimepicker();
-    }
     return (
         <div className='row dashContent'>
             {/* ------------ Left Layout ------------------- */}
-            <h6 className='col-12 pageHeader'>DashBoard</h6>
-            <div className='col-8'>
+            <div><h6 className='col-12 pageHeader'>DashBoard</h6></div>
+            <div className='col-8 overflow'>
                 {/* ------- statics cards ---------- */}
-                <div className='row '>
+                <div className='row'>
                     <div className='col-11 float'>
-                        <div className='sizing card card-body col-2 '>
+                        <div className='sizing card  card-body col-2 '>
                             <span id='count1'>04
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
                                     <g fill="none" stroke="#0fdd8e" stroke-linecap="round" stroke-linejoin="round">
@@ -153,23 +150,66 @@ const DashBoard = () => {
                     </div>
                 </div>
                 {/* -------------------meeting Calender------------------ */}
-                <div className='sizing2 card pt-3 pb-3 '>
+                <div className='sizing2 card pt-4 pb-3 '>
                     <div className='row'>
-                        <div className='col-7'><h6 className="headertwo">Top Selling Products</h6></div>
-                        <div className='col-5 date scrolling-wrapper'>
-                        <input className="input-field no-outline" type="date" placeholder="Date and Time"/>
+                        <div className='col-6'><h6 className="headertwo">Today's Schedule</h6></div>
+                        <div className='col-6 date '>
+                            <input className="input-field no-outline" type="date" placeholder="Date and Time" />
                         </div>
                     </div>
-                    <div className='row dateCard'>
-                        <div className='col-2 card'>02 Mon</div>
-                        <div className='col-2 card'>03 Tue</div>
-                        <div className='col-2 card'>04 Wed</div>
-                        <div className='col-2 card'>05 Thur</div>
-                        <div className='col-2 card'>06 Fri</div>
-                        <div className='col-2 card'>07 Sat</div>
-                        {/* <div className='col-2 card'>08 Sun</div> */}
+
+                    <div className='row dateCard pt-1 pb-1'>
+                        <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
+                        <div className='col-2 card pt-1 mx-1'>03 <br /> Tue</div>
+                        <div className='col-2 card pt-1 mx-1'>04 <br /> Wed</div>
+                        <div className='col-2 card pt-1 mx-1'>05 <br /> Thu</div>
+                        <div className='col-2 card pt-1 mx-1'>06 <br /> Fri</div>
+                        <div className='col-2 card pt-1 mx-1'>07 <br /> Sat</div>
                     </div>
-                    
+                    {/* ---------------meeting with--------------- */}
+                    <div className=' dateCard1 bgazure pt-3 pb-3'>
+                        <div className='float row '>
+                            <div className='bipeople col-1 right'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="navy" className="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                                </svg>
+                            </div >
+                            <div className='col-6 meetWith'>
+                                <t>Meeting with Ron Harris</t> <br />
+                                <t className="text-primary">4:00 PM</t>
+                            </div>
+                            <div className='callVideo  col-5 float'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone bg-success" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-camera-video bg-danger" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='dateCard1  pt-3 pb-3'>
+                        <div className='float row'>
+                            <div className='bipeople col-1 right'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="navy" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                                </svg>
+                            </div>
+                            <div className='col-6 meetWith'>
+                                <t>Meeting with Harry Dar</t><br />
+                                <t className="text-primary">6:00 PM</t>
+                            </div>
+
+                            <div className='callVideo col-5 float'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone bg-success" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-camera-video bg-danger" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
