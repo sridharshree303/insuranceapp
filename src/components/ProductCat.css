@@ -7,3 +7,13 @@
 .bottom{
     margin-top: 200px;
 }
+
+.modalButton{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin: 15px 30px 0px 30px;
+    padding: 7px 30px;
+    font-weight: 500;
+
+}

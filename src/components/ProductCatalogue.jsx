@@ -25,7 +25,7 @@ const ProductCatalogue = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className='modalButton' variant="light" onClick={handleShow}>
         Send Wishes
       </Button>
 

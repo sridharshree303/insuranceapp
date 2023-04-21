@@ -319,3 +319,27 @@ input::-webkit-datetime-edit {
     border-radius: 30px;
     background-color: rgb(220, 220, 220);
 }
+
+/* -----------------Avatar------------------- */
+.av1{
+    /* background-color: red; */
+    width: 170px;
+    margin: 15px 0px 8px 0px;
+}
+
+.avatarGroup p{
+    color: darkblue;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.avatar{
+    margin: -7px;
+}
+
+.av2{
+    width: 170px;
+    margin: 5px 0px 8px 0px;
+}
+
+

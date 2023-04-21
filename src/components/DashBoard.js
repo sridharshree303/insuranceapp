@@ -2,6 +2,9 @@ import React from 'react';
 import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
 import ProductCatalogue from './ProductCatalogue';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import imageOne from '../jsonfiles/Sridhar.jpg';
 
 const DashBoard = () => {
 
@@ -116,6 +119,13 @@ const DashBoard = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* -----------------bar chart------------------------- */}
+                <div className='row px-2'>
+                    <div className='sizing3 row card card-body'>
+                        <h3>Bar chart</h3>
+                    </div>
+                </div>
             </div>
 
             {/* ----------------- Right layout --------------------------------- */}
@@ -218,12 +228,31 @@ const DashBoard = () => {
                         <div className='col-9'><h6 className="headertwo">Today's Events</h6></div>
                         <div className='col-3 right px-5'><i className="fa fa-birthday-cake" aria-hidden="true"></i></div>
                     </div>
-                    <div>
+                    <div className='row avatarGroup'>
+                        <div className='col-6'>
+                            <div className='col-4 av1 mt-4 mb-2 float'>
+                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                            </div>
+                            <p className='text-secondary'>+{18} birthdays</p>
+                        </div>
+                        <div className='col-6'>
+                            <ProductCatalogue />
+                        </div>
+                    </div>
+                    <div className='row avatarGroup'>
+                        <div className='col-6'>
+                            <div className='av2 float'>
+                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                            </div>
+                            <p className='text-secondary'> +{1} Aniversary today</p>
+                        </div>
+                        <div className='col-6'>
+                            <ProductCatalogue />
+                        </div>
+                    </div>
 
-                    </div>
-                    <div>
-                        <ProductCatalogue/>
-                    </div>
                 </div>
             </div>
         </div>
