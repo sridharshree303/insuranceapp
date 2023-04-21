@@ -23,6 +23,10 @@ const Modals = () => {
     console.log("handleClose2");
   }
 
+  const [emails,setEmails] = useState(["sridhar","tejasri","lavanya"]);
+  const [message,setMessage] = useState(["Wish You a Very Happy Birthday"]);
+
+
   return (
     <>
       <Button className='modalButton' variant="light" onClick={handleShow}>
@@ -32,15 +36,24 @@ const Modals = () => {
       {show ?
         <Modal size='lg' show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>To</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form>
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
                 <Form.Control
-                  type="email"
+                  type="text"
+                  defaultValue={emails}
                   placeholder="name@example.com"
+                  autoFocus
+                />
+              </Form.Group>
+              <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
+                <Form.Control
+                  className='birthdayMessage'
+                  type="text"
+                  placeholder="Enter message"
+                  defaultValue={message}
                   autoFocus
                 />
               </Form.Group>

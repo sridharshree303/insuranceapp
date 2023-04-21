@@ -1,6 +1,6 @@
 [
     {
-        "Policy Owner":"sridhar",
+        "Policy Owner":"Sridhar",
         "Life assurred":"tejasri",
         "Prd type":"Carona covach",
         "Appplication No":"11001",
@@ -10,7 +10,7 @@
     },
     
     {
-        "Policy Owner":"sri",
+        "Policy Owner":"Sri",
         "Life assurred":"teja",
         "Prd type":"Vehicle Protect",
         "Appplication No":"11002",
@@ -18,8 +18,6 @@
         "SA"	: "100002",
         "Status" : "UW"
     },
-    
-    
     
     {
         "Policy Owner":"Jodha",
@@ -35,7 +33,7 @@
         "Life assurred":"Lucy",
         "Prd type":"Life protect",
         "Appplication No":"11004",
-        "Date":"12-1-2023",
+        "Date":"12-01-2023",
         "SA"	: "100004",
         "Status" : "UW"
     },
