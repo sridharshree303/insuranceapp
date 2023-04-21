@@ -1,18 +1,16 @@
 import './App.css';
 import DashBoard from './components/DashBoard';
 import Header from './components/Header';
-import ProductCatalogue from './components/ProductCatalogue';
 
 function App() {
   return (
     <div className='app'>
-      <div className='container-fluid fixed shadowBottom'>
+      <div className='container-fluid shadowBottom'>
         <Header />
       </div>
 
-
-      <div className='float'>
-        <div className=''>
+      <div className='rightGrid row '>
+        <div className='gridOne'>
           <input type="checkbox" id="check" name='check' className="hide" />
           <div className='dashboard shadowRight' id='dashboard' >
             <ol>
@@ -73,11 +71,12 @@ function App() {
             </ol>
           </div>
         </div>
+        <div className='gridTwo'>
+          <DashBoard />
+        </div>
+        
       </div>
-      <div className='mainData'>
-          <DashBoard/>
-          {/* <ProductCatalogue/> */}
-      </div>
+
     </div>
 
   );
