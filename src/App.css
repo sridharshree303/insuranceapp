@@ -9,6 +9,18 @@ body {
   background-color: whitesmoke;
 }
 
+/* //vertical */
+.scroll-y {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+  
+/* // horizantal */
+.scroll-x {
+overflow-x: auto;
+max-width: 70%;
+}
+
 .left{
   text-align: left;
   float: left;
@@ -59,7 +71,6 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  /* max-width: 100%; */
   margin-top: 75px;
   padding-left: 100px;
   background-color: white;
@@ -69,6 +80,24 @@ body {
   display: flex;
 }
 
+.rightGrid{
+  display: grid;
+}
+
+.gridOne{
+  width: auto;
+  /* width: 10%; */
+  position: absolute;
+}
+
+.gridTwo{
+  /* width: auto; */
+  /* width: 100%;  */
+  /* max-width: 900px; */
+  position: absolute;
+  margin-left: 95px;
+  padding-right: 70px;
+}
 
 /* ---------------------------DashBoard------------------------------- */
 ol{
@@ -77,15 +106,14 @@ ol{
 }
 
 .dashboard{
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
-  /* min-height: 90vh; */
+  min-height: 108vh;
   background: white;
   box-shadow: 3px 0 3px -2px rgb(203, 199, 199);
   border-right: 1px solid grey;
-  position: fixed;
+  position: relative;
   z-index: 1;
-  margin-top: 75px;
   max-width: 100px;
   transition: 0.5s ease-in-out;
 }
@@ -97,7 +125,7 @@ ol{
 
 ol li{
   list-style-type: none;
-  margin-top: 10px;
+  margin-top: 17px;
 }
 
 

@@ -47,6 +47,10 @@
     color: rgb(20, 180, 180);
 }
 
+.overflow{
+    overflow-y: hidden scroll;
+}
+
 #count3 svg{
     margin: 0px 0px 5px 20px;
     width: 35px;
@@ -196,6 +200,9 @@
     background-color: rgb(241, 236, 236);
     border: none;
     background-clip: padding-box;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-left: 25px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -209,11 +216,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
-    left: 66%;
+    left: 65%;
 }
 input::-webkit-datetime-edit-fields-wrapper {
     position: relative;
-    left: 10%;
+    left: 15%;
 }
 input::-webkit-datetime-edit {
     position: relative;
@@ -221,18 +228,118 @@ input::-webkit-datetime-edit {
 }
 
 .dateCard{
-    margin: 10px 0px;
+    margin: 5px -7px;
+    /* width: 450px; */
+}
+
+.dateCard1{
+    margin: 0px 0px;
+    /* width: 430px; */
+    padding: 5px 5px 5px 15px;
+    
 }
 
 .dateCard .card{
-    width: 14%;
-    margin: 0px 6px 0px 0px;
+    font-weight: 500;
+    margin: 10px 0px 10px 0px;
+    width: 59px;
+    height: 58px;
     display: inline-block;
 }
 
-.scrolling-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  
+.dateCard .card p{
+    /* padding-bottom: 2px; */
+    margin-bottom: 5px;
+    font-size: 15px;
+    /* margin-right: 5px; */
 }
+
+.bgazure{
+    background-color: azure;
+}
+
+.bgwhitesmoke{
+    background-color: whitesmoke;
+}
+
+.float .bi-people {
+    width: 30px;
+    height: 30px;
+}
+
+.bipeople{
+    font-size: large;
+}
+
+.float t{
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.callVideo{
+    float: right;
+    padding-left: 10%;
+    margin-top: 5px;
+}
+
+.callVideo svg{
+    border-radius: 16px;
+    padding:10px;
+    width: 38px;
+    height: 38px;
+}
+
+.callVideo svg:hover{
+    border-radius: 16px;
+    padding: 9px;
+    width: 40px;
+    height: 40px;
+}
+
+.meetWith{
+    padding-left: 25px;
+}
+
+/* ------------------------Todays events------------------------------- */
+.sizing4{
+    margin: 20px 20px 0px 0px;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.fa-birthday-cake{
+    color: rgb(19, 170, 216);
+    height: 30px;
+    width: 30px;
+    padding: 5px 8px 0px 0px;
+    border-radius: 30px;
+    background-color: rgb(220, 220, 220);
+}
+
+/* -----------------Avatar------------------- */
+.av1{
+    /* background-color: red; */
+    width: 170px;
+    margin: 15px 0px 8px 0px;
+}
+
+.avatarGroup p{
+    color: darkblue;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.avatar{
+    margin: -7px;
+}
+
+.av2{
+    width: 170px;
+    margin: 5px 0px 8px 0px;
+}
+
+
