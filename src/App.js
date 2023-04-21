@@ -1,12 +1,10 @@
 import './App.css';
 import DashBoard from './components/DashBoard';
 import Header from './components/Header';
-import ProductCatalogue from './components/ProductCatalogue';
 
 function App() {
   return (
     <div className='app'>
-      {/* <ProductCatalogue/> */}
       <div className='container-fluid shadowBottom'>
         <Header />
       </div>
@@ -75,8 +73,6 @@ function App() {
         </div>
         <div className='gridTwo'>
           <DashBoard />
-          {/* <ProductCatalogue/> */}
-
         </div>
         
       </div>

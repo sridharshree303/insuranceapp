@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './ProductCat.css';
+import './Modal.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
-const ProductCatalogue = () => {
+const Modals = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
 
@@ -83,4 +83,4 @@ const ProductCatalogue = () => {
   );
 }
 
-export default ProductCatalogue;
+export default Modals;

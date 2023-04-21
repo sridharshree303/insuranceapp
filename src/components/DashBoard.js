@@ -1,9 +1,8 @@
 import React from 'react';
 import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
-import ProductCatalogue from './ProductCatalogue';
+import Modals from './Modals';
 import Avatar from '@mui/material/Avatar';
-import AvatarGroup from '@mui/material/AvatarGroup';
 import imageOne from '../jsonfiles/Sridhar.jpg';
 
 const DashBoard = () => {
@@ -238,7 +237,7 @@ const DashBoard = () => {
                             <p className='text-secondary'>+{18} birthdays</p>
                         </div>
                         <div className='col-6'>
-                            <ProductCatalogue />
+                            <Modals />
                         </div>
                     </div>
                     <div className='row avatarGroup'>
@@ -249,7 +248,7 @@ const DashBoard = () => {
                             <p className='text-secondary'> +{1} Aniversary today</p>
                         </div>
                         <div className='col-6'>
-                            <ProductCatalogue />
+                            <Modals />
                         </div>
                     </div>
 
