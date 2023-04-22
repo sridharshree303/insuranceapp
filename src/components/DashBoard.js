@@ -3,7 +3,7 @@ import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
 import Modals from './Modals';
 import Avatar from '@mui/material/Avatar';
-import imageOne from '../jsonfiles/Sridhar.jpg';
+
 import apData from '../jsonfiles/newApplicants.json';
 
 const DashBoard = () => {
@@ -219,9 +219,9 @@ const DashBoard = () => {
                     <div className='row avatarGroup'>
                         <div className='col-6'>
                             <div className='col-4 av1 mt-4 mb-2 float'>
-                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
-                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
-                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                                <Avatar  className='avatar  bg-primary'  alt="Sri" src={"/"} />
+                                <Avatar className='avatar bg-warning' alt="John" src={"/"} />
+                                <Avatar className='avatar bg-info' alt="Monu" src={"/"} />
                             </div>
                             <p className='text-secondary'>+{18} birthdays</p>
                         </div>
@@ -232,7 +232,7 @@ const DashBoard = () => {
                     <div className='row avatarGroup'>
                         <div className='col-6'>
                             <div className='av2 float'>
-                                <Avatar className='avatar' alt="Sridhar" src={imageOne} />
+                                <Avatar className='avatar bg-secondary' alt="N" src={"/"} />
                             </div>
                             <p className='text-secondary'> +{1} Aniversary today</p>
                         </div>
