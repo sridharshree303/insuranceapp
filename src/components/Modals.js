@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Logo from '../jsonfiles/Sent.png';
 
-import { ReactMultiEmail, isEmail } from 'react-multi-email';
+import { ReactMultiEmail } from 'react-multi-email';
 import 'react-multi-email/dist/style.css';
 
 
@@ -35,10 +35,11 @@ const Modals = () => {
   }
 
   const [emails, setEmails] = useState(["SridharKolluru@gmail.com", "TejasriGamidi@gamil.com", "LavanyaBejawada@gmail.com", "LavanyaBejawada@gmail.com"]);
-  const [message, setMessage] = useState(["Wish You a Very Happy Birthday"]);
-  const [focused, setFocused] = React.useState(false);
+  const [message, ] = useState(["Wish You a Very Happy Birthday"]);
+  // const [focused, setFocused] = React.useState(false);
   const [textAreaCount, setTextAreaCount] = React.useState(0);
   const [disable, setDisable] = React.useState(false);
+
 
 
   const recalculate = (e) => {
@@ -75,8 +76,8 @@ const Modals = () => {
                     setEmails(emails);
                   }}
                   autoFocus={true}
-                  onFocus={() => setFocused(true)}
-                  onBlur={() => setFocused(false)}
+                  // onFocus={() => setFocused(true)}
+                  // onBlur={() => setFocused(false)}
                   getLabel={(email, index, removeEmail) => {
                     return (
                       index < 2 ?
@@ -87,7 +88,7 @@ const Modals = () => {
                           </span>
                         </div>
                         : (
-                          index == 3
+                          index === 3
                             ?
                             <div data-tag key={index}>
                               <div data-tag-item>{"+" + (emails.length - 2) + " more"}</div>
