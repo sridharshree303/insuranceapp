@@ -5,23 +5,26 @@ import Modals from './Modals';
 import Avatar from '@mui/material/Avatar';
 import imageOne from '../jsonfiles/Sridhar.jpg';
 import apData from '../jsonfiles/newApplicants.json';
+import { Link } from 'react-router-dom';
 
 const DashBoard = () => {
 
     return (
         <div className='row dashContent'>
             {/* ------------ Left Layout ------------------- */}
-            <div><h6 className='col-12 pageHeader'>DashBoard</h6></div>
+            <div><h6 className='col-12 pageHeader px-2'>DashBoard</h6></div>
             <div className='col-8 overflow'>
                 {/* ------- statics cards ---------- */}
-                <div className='row'>
+                <div className='row px-2'>
                     <div className='col-11 float'>
                         <div className='sizing card  card-body col-2 '>
-                            <span id='count1'>04
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
-                                    <g fill="none" stroke="#0fdd8e" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M9.5 3.5h4v4" /><path d="M13.5 3.5L7.85 9.15a.5.5 0 0 1-.7 0l-2.3-2.3a.5.5 0 0 0-.7 0L.5 10.5" /></g></svg>
-                                <h6 id="countName">New Leads</h6></span>
+                            <Link className='textDecoration ' to="/view/newleads">
+                                <span id='count1'>04
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                                        <g fill="none" stroke="#0fdd8e" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M9.5 3.5h4v4" /><path d="M13.5 3.5L7.85 9.15a.5.5 0 0 1-.7 0l-2.3-2.3a.5.5 0 0 0-.7 0L.5 10.5" /></g></svg>
+                                    <h6 id="countName">New Leads</h6></span>
+                            </Link>
                         </div>
                         <div className='sizing card card-body col-2 '>
                             <span id='count2'>10
@@ -55,11 +58,13 @@ const DashBoard = () => {
                 </div>
 
                 {/* ---------------View new Applicants-------------------- */}
-                <div className='row px-2'>
+                <div className='row px-3'>
                     <div className='sizing3 row card card-body'>
                         <div className='float row'>
                             <h3 className='applicantHeader col-5 mt-1'>18 New Applicants</h3>
-                            <button className='applicantHeader2 col-2 offset-2 right noBorder  right'>View All</button>
+                            <button className='applicantHeader2 col-2 offset-2 right noBorder  right'>
+                            <Link className='textDecoration text-dark' to='/view/newapplicants'> View All</Link>
+                            </button>
                             {/* -------dropdown--------- */}
                             <div className="col-3">
                                 <div className='dropdown'>
@@ -86,18 +91,18 @@ const DashBoard = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        apData.length != 0 && apData.map((data, ind) => {
+                                        apData.length !== 0 && apData.map((data, ind) => {
 
-                                            return(
-                                            ind <= 5 ?
-                                                <tr key={ind}>
-                                                    <td>DCO3</td>
-                                                    <td>{data['Policy Owner']}</td>
-                                                    <td>{data['Prd type']}</td>
-                                                    <td>{data.Date}</td>
-                                                    <td>{data.Status}</td>
-                                                </tr>
-                                            : null
+                                            return (
+                                                ind <= 5 ?
+                                                    <tr key={ind}>
+                                                        <td>DCO3</td>
+                                                        <td>{data['Policy Owner']}</td>
+                                                        <td>{data['Prd type']}</td>
+                                                        <td>{data.Date}</td>
+                                                        <td>{data.Status}</td>
+                                                    </tr>
+                                                    : null
                                             )
                                         })
                                     }
@@ -109,15 +114,16 @@ const DashBoard = () => {
                 </div>
 
                 {/* -----------------bar chart------------------------- */}
-                <div className='row px-2'>
+                <div className='row px-3'>
                     <div className='sizing3 row card card-body'>
+                        <h3>All Sales</h3>
                         <h3>Bar chart</h3>
                     </div>
                 </div>
             </div>
 
             {/* ----------------- Right layout --------------------------------- */}
-            <div className='col-4'>
+            <div className='col-4 px-1'>
                 <div className='sizing2 card pb-3 pt-3'>
                     <h6 className="headertwo">Top Selling Products</h6>
                     <div className='floatR'>
@@ -174,7 +180,7 @@ const DashBoard = () => {
                                 </svg>
                             </div >
                             <div className='col-6 meetWith'>
-                                <h4>Meeting with Ron Harris</h4> 
+                                <h4>Meeting with Ron Harris</h4>
                                 <h4 className="text-primary">4:00 PM</h4>
                             </div>
                             <div className='callVideo  col-5 float'>
