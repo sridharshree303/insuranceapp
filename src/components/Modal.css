@@ -8,14 +8,26 @@
     margin-top: 200px;
 }
 
+.modalTwoBg{
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+.Logo{
+    background: transparent;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    margin-top: -220px;
+}
+
 .modalButton{
     background-color: whitesmoke;
     border: 1px solid grey;
     border-radius: 30px;
-    margin: 15px 30px 0px 30px;
-    padding: 7px 30px;
+    margin: 15px 15px 0px 10px;
+    padding: 7px 20px;
     font-weight: 500;
-
 }
 
 .modalOneBtn{
@@ -30,4 +42,15 @@
 }
 .emails{
     border: 1px solid red;
+}
+
+.modalTwoText{
+    font-size: 20px;
+}
+
+.modalOneTwo{
+    border-radius: 30px;
+    color: whitesmoke;
+    padding: 9px 20px;
+    font-size: 16px;
 }

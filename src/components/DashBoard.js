@@ -225,7 +225,7 @@ const DashBoard = () => {
                             </div>
                             <p className='text-secondary'>+{18} birthdays</p>
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 right px-4'>
                             <Modals />
                         </div>
                     </div>
@@ -236,7 +236,7 @@ const DashBoard = () => {
                             </div>
                             <p className='text-secondary'> +{1} Aniversary today</p>
                         </div>
-                        <div className='col-6'>
+                        <div className='col-6 right px-4'>
                             <Modals />
                         </div>
                     </div>

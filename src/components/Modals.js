@@ -3,6 +3,7 @@ import './Modal.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import Logo from '../jsonfiles/Sent.png';
 
 import { ReactMultiEmail, isEmail } from 'react-multi-email';
 import 'react-multi-email/dist/style.css';
@@ -114,9 +115,9 @@ const Modals = () => {
                 className="mb-3 px-3"
                 controlId="exampleForm.ControlTextarea1"
               >
-                <div>
+                <div className=' pt-2'>
                   <Form.Label className='px-1'>Label</Form.Label>
-                  <span>{textAreaCount}/250</span>
+                  <span className='right'>{textAreaCount}/250</span>
                 </div>
                 <Form.Control as="textarea" disabled={disable} onChange={recalculate} rows={5} />
               </Form.Group>
@@ -135,20 +136,23 @@ const Modals = () => {
 
       {show2 ?
         <Modal centered size='xl bottom' show={show2} onHide={handleClose2}>
-          <Modal.Header className='px-5 pt-4' closeButton>
-            <div className='row'>
-              <div className='col-4'>
-                Image
+          <Modal.Body className='modalTwoBg pt-4 pb-4'>
+            <div className='row right px-3'>
+              <button type="button" onClick={handleClose2} className="btn-close col-12" aria-label="Close"></button>
+            </div>
+            <div className='row mt-4 pt-1'>
+              <div className='col-5'>
+                <img src={Logo} class="rounded float-left Logo" alt="..."/>
               </div>
-              <div className='col-6  bg-primary'>
-                <Modal.Title >Modal heading</Modal.Title>
-                <Button variant="success" onClick={handleClose2}>
+              <div className='col-7'>
+                <Modal.Title className='modalTwoText' >Your Birthday Wishes Has been sent.</Modal.Title>
+                <Button className='modalOneTwo fw-bold mt-4 mb-3' variant="info" onClick={handleClose2}>
                   Okay Thanks !
                 </Button>
               </div>
-              <div></div>
+
             </div>
-          </Modal.Header>
+          </Modal.Body>
         </Modal> : ""
       }
     </>
