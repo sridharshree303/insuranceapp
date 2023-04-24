@@ -7,6 +7,7 @@ import ProductCatalouge from './product/ProductCatalouge';
 import NewLeads from './viewdata/NewLeads';
 import ViewAllApplicants from './viewdata/ViewAllApplicants';
 
+
 function App() {
   return (
     <div className='app'>
@@ -15,7 +16,7 @@ function App() {
           <Header />
         </div>
 
-        <div className='rightGrid row '>
+        <div className='rightGrid row'>
           
           <div className='gridOne'>
             <input type="checkbox" id="check" name='check' className="hide" />

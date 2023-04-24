@@ -6,6 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import imageOne from '../jsonfiles/Sridhar.jpg';
 import apData from '../jsonfiles/newApplicants.json';
 import { Link } from 'react-router-dom';
+import BarChart from './BarChart';
 
 const DashBoard = () => {
 
@@ -116,8 +117,10 @@ const DashBoard = () => {
                 {/* -----------------bar chart------------------------- */}
                 <div className='row px-3'>
                     <div className='sizing3 row card card-body'>
-                        <h3>All Sales</h3>
-                        <h3>Bar chart</h3>
+                        <h4 className='applicantHeader'>All Sales</h4>
+                        <div >
+                            <BarChart className='chartbar'/>
+                        </div>
                     </div>
                 </div>
             </div>
