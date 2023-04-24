@@ -1,4 +1,6 @@
 import { Bar } from 'react-chartjs-2';
+import { Chart } from "chart.js/auto";
+// import { margin } from '@mui/system';
 /**import {Chart,LinearScale,CategoryScale,BarElement,Legend,Title,Tooltip} from 'chart.js';
 Chart.register(
     LinearScale,CategoryScale,BarElement,Legend,Title,Tooltip
@@ -6,6 +8,10 @@ Chart.register(
 
 const labels=['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct '];
 const labelss=[10000,20000,3000,35000,36000];
+
+if(false){
+    <Chart/>
+}
 
 const options = {
     plugins:{
