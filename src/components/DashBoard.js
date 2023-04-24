@@ -12,17 +12,17 @@ const DashBoard = () => {
 
     const [date, setDate] = useState(new Date().toISOString().substring(0, 10));
     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    const [dayObj, setDayObj] = useState({
+    const dayObj = {
         date: '',
         day: '',
-    });
+    };
 
     //button handler
     const [isActive, setIsActive] = useState(true);
-    const [activeButton,setActiveButton] = useState(0);
+    const [activeButton, setActiveButton] = useState(0);
 
     const nextDate = [];
-    const nextDateHandler = (ee) => {
+    const nextDateHandler = () => {
 
         let d = date;
         dayObj.date = new Date(d).getDate();
@@ -59,11 +59,11 @@ const DashBoard = () => {
 
     const buttonStyle = {
         backgroundColor: isActive ? 'blue' : 'white',
-        color : isActive ? 'white' : 'blue',
+        color: isActive ? 'white' : 'blue',
     };
 
-    useEffect(()=>{},[activeButton])
- 
+    useEffect(() => { }, [activeButton])
+
 
 
     return (
@@ -231,13 +231,16 @@ const DashBoard = () => {
                         {
 
                             nextDate.map((data, key) => {
-                                if (key < 6) {
-                                    if(key === activeButton){
-                                        return <button key={key} style={buttonStyle} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
-                                    }else{
-                                        return <button key={key} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
-                                    }
-                                }
+                                return (
+                                    key < 6 ?
+                                        key === activeButton 
+                                            ?
+                                            <button key={key} style={buttonStyle} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
+                                            :
+                                            <button key={key} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
+
+                                        : null
+                                )
                             })
 
                         }
