@@ -225,3 +225,8 @@ ol li label #arrow{
 }
 
 /* -----------Hide scrollbar--------------- */
+
+.bar{
+  height: 200px;
+  width: 800px;
+}

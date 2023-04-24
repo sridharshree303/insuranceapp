@@ -5,6 +5,7 @@ import Modals from './Modals';
 import Avatar from '@mui/material/Avatar';
 import imageOne from '../jsonfiles/Sridhar.jpg';
 import apData from '../jsonfiles/newApplicants.json';
+import BarChart from './BarChart';
 
 const DashBoard = () => {
 
@@ -89,7 +90,7 @@ const DashBoard = () => {
                                         apData.length != 0 && apData.map((data, ind) => {
 
                                             return(
-                                            ind <= 5 ?
+                                            ind <= 4 ?
                                                 <tr key={ind}>
                                                     <td>DCO3</td>
                                                     <td>{data['Policy Owner']}</td>
@@ -110,11 +111,29 @@ const DashBoard = () => {
 
                 {/* -----------------bar chart------------------------- */}
                 <div className='row px-2'>
-                    <div className='sizing3 row card card-body'>
-                        <h3>Bar chart</h3>
+                    <div className='sizing3 row card card-body' >
+                        <h4 className='applicantHeader'>All Sales</h4>
+                        <BarChart />
                     </div>
+                
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             {/* ----------------- Right layout --------------------------------- */}
             <div className='col-4'>
