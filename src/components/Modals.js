@@ -34,7 +34,7 @@ const Modals = () => {
     console.log("handleClose2");
   }
 
-  const [emails, setEmails] = useState(["SridharKolluru@gmail.com", "TejasriGamidi@gamil.com", "LavanyaBejawada@gmail.com", "LavanyaBejawada@gmail.com"]);
+  const [emails, setEmails] = useState(["S@gmail.com", "monu@gamil.com", "S143@gmail.com", "John@gmail.com"]);
   const [message, setMessage] = useState(["Wish You a Very Happy Birthday"]);
   const [focused, setFocused] = React.useState(false);
   const [textAreaCount, setTextAreaCount] = React.useState(0);

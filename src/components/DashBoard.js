@@ -1,12 +1,72 @@
-import React from 'react';
+import React,{useRef,useEffect,useState} from 'react';
 import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
 import Modals from './Modals';
 import Avatar from '@mui/material/Avatar';
-
+import Chart from 'chart.js/auto';
 import apData from '../jsonfiles/newApplicants.json';
-
+import moment from 'moment';
+import { Link } from 'react-router-dom';
 const DashBoard = () => {
+    const chartContainer = useRef(null);
+    const chart = useRef(null);
+  
+    useEffect(() => {
+      if (chart && chart.current) {
+        chart.current.destroy(); 
+      }
+  
+      const ctx = chartContainer.current.getContext('2d');
+      chart.current = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+          datasets: [
+            {
+              label: 'Sales',
+              data: [65, 59, 80, 81, 56, 55, 40,10,20,30,40,50],
+              backgroundColor: 'blue',
+            },
+            {
+              label: "Target",
+              data: [15, 25, 35, 45, 55, 65, 75,30,20,40,60],
+              backgroundColor: "purple",
+           
+            }
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true
+                }
+              }
+            ]
+          },
+          title: {
+            display: true,
+            text: "Sales vs. Target"
+          },
+          legend: {
+              display: true,
+              position: "top"
+            }
+          }
+        });
+      }, []);
+    //   .......calender.........
+      const [currentDate, setCurrentDate] = useState(moment());
+const daysOfWeek = ['Mon   '  , 'Tues  ',  'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+
+  const startOfWeek = currentDate.clone().startOf('week');
+
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    days.push(startOfWeek.clone().add(i , 'day'));
+  }
+
 
     return (
         <div className='row dashContent'>
@@ -21,7 +81,7 @@ const DashBoard = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
                                     <g fill="none" stroke="#0fdd8e" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M9.5 3.5h4v4" /><path d="M13.5 3.5L7.85 9.15a.5.5 0 0 1-.7 0l-2.3-2.3a.5.5 0 0 0-.7 0L.5 10.5" /></g></svg>
-                                <h6 id="countName">New Leads</h6></span>
+                                <h6 ><Link to ="/NewLeads" id="countName">New Leads </Link></h6></span>
                         </div>
                         <div className='sizing card card-body col-2 '>
                             <span id='count2'>10
@@ -30,13 +90,15 @@ const DashBoard = () => {
                                         <path fill="" strokeLinecap="round" strokeLinejoin="round" d="M10 44h28a2 2 0 0 0 2-2V14H30V4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2Z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m30 4l10 10" /><circle cx="24" cy="28" r="8" fill="#555" />
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M23 25v4h4" /></g></mask><path fill="#0fdd8e" d="M0 0h48v48H0z" mask="url(#ipTFileDate0)" /></svg>
-                                <h6 id="countName">Total Claims</h6></span>
+                             <h6 ><Link to="/TotalClaims"id="countName">Total Claims</Link></h6> 
+                                {/* <Link to="/TotalClaim" className="text-size small-black mt-6 card2">TotalClaims</Link> */}
+                                </span>
                         </div>
                         <div className='sizing card card-body col-2 '>
                             <span id='count3'> 08
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <path fill="none" stroke="Orange" strokeWidth="2" d="M1.75 16.002C3.353 20.098 7.338 23 12 23c6.075 0 11-4.925 11-11m-.75-4.002C20.649 3.901 16.663 1 12 1C5.925 1 1 5.925 1 12m8 4H1v8M23 0v8h-8" /></svg>
-                                <h6 id="countName">Renewal</h6></span>
+                                <h6 > <Link to ="/Renewal" id="countName">Renewal</Link></h6></span>
                         </div>
                         <div className='sizing card card-body col-2 '>
                             <span id='count4'> 05
@@ -44,7 +106,7 @@ const DashBoard = () => {
                                     <mask id="ipSFileDateOne0"><g fill="none" strokeWidth="3"><path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" d="M40 23v-9L31 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2h12" />
                                         <circle cx="34" cy="36" r="8" fill="#fff" stroke="#fff" /><path stroke="#000" strokeLinecap="round" strokeLinejoin="round" d="M33 33v4h4" /><path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" d="M30 4v10h10" /></g>
                                     </mask><path fill="orange" d="M0 0h48v48H0z" mask="url(#ipSFileDateOne0)" /></svg>
-                                <h6 id="countName">Expired</h6></span>
+                                <h6 > <Link to="/Expired"  id="countName">Expired </Link></h6></span>
                         </div>
                     </div>
                     <div className='col-1 rotate180' id='arrowTwo'>
@@ -59,7 +121,7 @@ const DashBoard = () => {
                     <div className='sizing3 row card card-body'>
                         <div className='float row'>
                             <h3 className='applicantHeader col-5 mt-1'>18 New Applicants</h3>
-                            <button className='applicantHeader2 col-2 offset-2 right noBorder  right'>View All</button>
+                            <Link to ='ViewAllApplicants' className='applicantHeader2 col-2 offset-2 right noBorder  right'>View All</Link>
                             {/* -------dropdown--------- */}
                             <div className="col-3">
                                 <div className='dropdown'>
@@ -111,7 +173,11 @@ const DashBoard = () => {
                 {/* -----------------bar chart------------------------- */}
                 <div className='row px-2'>
                     <div className='sizing3 row card card-body'>
-                        <h3>Bar chart</h3>
+                        <h3>All sales</h3>
+                        <canvas ref={chartContainer} />
+                        
+              
+            
                     </div>
                 </div>
             </div>
@@ -158,12 +224,33 @@ const DashBoard = () => {
                     </div>
 
                     <div className='row dateCard pt-1 pb-1 '>
-                        <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
+                        {/* <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
                         <div className='col-2 card pt-1 mx-1'>03 <br /> Tue</div>
                         <div className='col-2 card pt-1 mx-1'>04 <br /> Wed</div>
                         <div className='col-2 card pt-1 mx-1'>05 <br /> Thu</div>
                         <div className='col-2 card pt-1 mx-1'>06 <br /> Fri</div>
-                        <div className='col-2 card pt-1 mx-1'>07 <br /> Sat</div>
+                        <div className='col-2 card pt-1 mx-1'>07 <br /> Sat</div> */}
+                      <div>Current Date: {currentDate.format('DD/MM/YYYY')}</div>
+       <table>
+     <thead>
+          <tr>
+          {daysOfWeek.map((day) => (
+              <th key={day}>{day}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {days.map((day) => (
+              <td key={day.format('DD/MM/YYYY')} className={day.isSame(moment(), 'day') ? 'current' : ''}>
+                {day.format('D')}
+              </td>
+            ))}
+          </tr>
+        </tbody>
+        
+      </table>
+      
                     </div>
                     {/* ---------------meeting with--------------- */}
                     <div className=' dateCard1 bgazure pt-3 pb-3'>
