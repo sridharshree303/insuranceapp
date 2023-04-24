@@ -17,6 +17,10 @@ const DashBoard = () => {
         day: '',
     });
 
+    //button handler
+    const [isActive, setIsActive] = useState(true);
+    const [activeButton,setActiveButton] = useState(0);
+
     const nextDate = [];
     const nextDateHandler = (ee) => {
 
@@ -33,20 +37,34 @@ const DashBoard = () => {
 
             //day
             const dayOfWk = daysOfWeek[next.getDay()];
-            // console.log(formattedDate + "--" + dayOfWk);
 
             nextDate.push({ date: formattedDate, day: dayOfWk });
         }
-        // console.log(nextDate)
     }
 
     nextDateHandler();
 
     const dateHandler = (e) => {
         e.preventDefault();
-        // console.log(e.target.value);
         setDate(e.target.value);
+        setActiveButton(0);
     }
+
+    const handleClick = (index) => {
+        setActiveButton(index);
+        setIsActive(true);
+        console.log(isActive);
+        console.log(index);
+    }
+
+    const buttonStyle = {
+        backgroundColor: isActive ? 'blue' : 'white',
+        color : isActive ? 'white' : 'blue',
+    };
+
+    useEffect(()=>{},[activeButton])
+ 
+
 
     return (
         <div className='row dashContent'>
@@ -214,7 +232,11 @@ const DashBoard = () => {
 
                             nextDate.map((data, key) => {
                                 if (key < 6) {
-                                    return <button key={key} className='col-2 calender  btn btn-light'><p>{data.date}<br />{data.day}</p></button>
+                                    if(key === activeButton){
+                                        return <button key={key} style={buttonStyle} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
+                                    }else{
+                                        return <button key={key} onClick={() => handleClick(key)} className='col-2 calender btn btn-outline-primary shadow-sm mb-2 rounded '><p>{data.date}<br />{data.day}</p></button>
+                                    }
                                 }
                             })
 
