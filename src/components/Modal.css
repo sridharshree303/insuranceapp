@@ -17,3 +17,11 @@
     font-weight: 500;
 
 }
+
+.birthdayMessage{
+    font-size: 15px;
+    font-weight: 600;
+}
+.emails{
+    border: 1px solid red;
+}
