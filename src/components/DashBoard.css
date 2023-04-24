@@ -93,6 +93,12 @@
     height: 40px;
 }
 
+.calender{
+    width: 60px;
+    height: 70px;
+    margin-right: 9px;
+}
+
 .headertwo{
     margin-top: 5px;
     font-size: 18px;

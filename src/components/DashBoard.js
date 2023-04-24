@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './DashBoard.css';
 import Table from 'react-bootstrap/Table';
 import Modals from './Modals';
@@ -9,6 +9,44 @@ import { Link } from 'react-router-dom';
 import BarChart from './BarChart';
 
 const DashBoard = () => {
+
+    const [date, setDate] = useState(new Date().toISOString().substring(0, 10));
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const [dayObj, setDayObj] = useState({
+        date: '',
+        day: '',
+    });
+
+    const nextDate = [];
+    const nextDateHandler = (ee) => {
+
+        let d = date;
+        dayObj.date = new Date(d).getDate();
+        dayObj.day = daysOfWeek[new Date(d).getDay()];
+        nextDate.push(dayObj);
+
+        for (let i = 1; i <= 6; i++) {
+
+            //date
+            const next = new Date(new Date(d).getTime() + i * 24 * 60 * 60 * 1000);
+            const formattedDate = next.getDate();
+
+            //day
+            const dayOfWk = daysOfWeek[next.getDay()];
+            // console.log(formattedDate + "--" + dayOfWk);
+
+            nextDate.push({ date: formattedDate, day: dayOfWk });
+        }
+        // console.log(nextDate)
+    }
+
+    nextDateHandler();
+
+    const dateHandler = (e) => {
+        e.preventDefault();
+        // console.log(e.target.value);
+        setDate(e.target.value);
+    }
 
     return (
         <div className='row dashContent'>
@@ -64,7 +102,7 @@ const DashBoard = () => {
                         <div className='float row'>
                             <h3 className='applicantHeader col-5 mt-1'>18 New Applicants</h3>
                             <button className='applicantHeader2 col-2 offset-2 right noBorder  right'>
-                            <Link className='textDecoration text-dark' to='/view/newapplicants'> View All</Link>
+                                <Link className='textDecoration text-dark' to='/view/newapplicants'> View All</Link>
                             </button>
                             {/* -------dropdown--------- */}
                             <div className="col-3">
@@ -119,7 +157,7 @@ const DashBoard = () => {
                     <div className='sizing3 row card card-body'>
                         <h4 className='applicantHeader'>All Sales</h4>
                         <div >
-                            <BarChart className='chartbar'/>
+                            <BarChart className='chartbar' />
                         </div>
                     </div>
                 </div>
@@ -162,17 +200,31 @@ const DashBoard = () => {
                     <div className='row'>
                         <div className='col-6'><h6 className="headertwo">Today's Schedule</h6></div>
                         <div className='col-6 date '>
-                            <input className="input-field no-outline" type="date" placeholder="Date and Time" />
+                            <input className="input-field no-outline"
+                                onChange={dateHandler}
+                                name="date"
+                                value={date}
+                                type="date"
+                                placeholder="Date and Time" />
                         </div>
                     </div>
 
                     <div className='row dateCard pt-1 pb-1 '>
-                        <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
+                        {
+
+                            nextDate.map((data, key) => {
+                                if (key < 6) {
+                                    return <button key={key} className='col-2 calender  btn btn-light'><p>{data.date}<br />{data.day}</p></button>
+                                }
+                            })
+
+                        }
+                        {/* <div className='col-2 card pt-1 mx-1 bg-primary'><p>02 <br />Mon</p></div>
                         <div className='col-2 card pt-1 mx-1'>03 <br /> Tue</div>
                         <div className='col-2 card pt-1 mx-1'>04 <br /> Wed</div>
                         <div className='col-2 card pt-1 mx-1'>05 <br /> Thu</div>
                         <div className='col-2 card pt-1 mx-1'>06 <br /> Fri</div>
-                        <div className='col-2 card pt-1 mx-1'>07 <br /> Sat</div>
+                        <div className='col-2 card pt-1 mx-1'>07 <br /> Sat</div> */}
                     </div>
                     {/* ---------------meeting with--------------- */}
                     <div className=' dateCard1 bgazure pt-3 pb-3'>
