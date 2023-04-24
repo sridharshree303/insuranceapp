@@ -1,14 +1,14 @@
 import React from 'react'
 import './NewLeads.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 const NewLeads = () => {
 
-  const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  }
+  // const navigate = useNavigate();
+  // const goBack = () => {
+  //   navigate(-1);
+  // }
 
   return (
     <div className='newLead container bg-info'>

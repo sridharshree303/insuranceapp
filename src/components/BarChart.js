@@ -1,6 +1,4 @@
 import { Bar } from 'react-chartjs-2';
-import { Chart } from "chart.js/auto";
-import { margin } from '@mui/system';
 /**import {Chart,LinearScale,CategoryScale,BarElement,Legend,Title,Tooltip} from 'chart.js';
 Chart.register(
     LinearScale,CategoryScale,BarElement,Legend,Title,Tooltip
