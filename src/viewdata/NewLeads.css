@@ -1,5 +1,5 @@
-.newleads{
-    background-color: yellowgreen;
+.newlead{
+    background-color: white;
 }
 
 .tableHeader{
@@ -16,4 +16,71 @@
     padding-top: 10px;
     width: 20px;
     font-size: 20px;
+}
+
+
+.bordergrey{
+    border: 1px transparent grey;
+    box-shadow: 1px 1px 3px 3px rgb(213, 211, 211);
+}
+
+
+.tableHeader1 {
+    padding: 30px 0px 0px 0px;
+    font-size: 20px;
+}
+
+.tableHeader1 h4{
+    font-size: 24px;
+    padding-left: 17px;
+    padding-top: 5px;
+}
+
+.tableHeader thead{
+    height: 60px;
+}
+
+.tableHeader thead tr th{
+    padding-bottom: 15px;
+    background-color: rgba(240, 255, 255, 0.837);
+}
+
+.tableHeader tbody tr td{
+    padding: 12px 8px;
+    background-color: rgba(240, 255, 255, 0.305);
+}
+
+.tableHeader tbody tr {
+    background-color: white;
+}
+
+.colsize{
+    width: 200px;
+}
+
+.avatarp{
+    width: 60px;
+}
+
+.border2{
+    border-width: 2px ;
+    box-shadow: 1px 1px 3px 3px rgb(208, 202, 202);
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.border3{
+    border-radius: 15px;
+    background: linear-gradient(to top left, #09C6F9 0%, #045DE9 100%);
+    /* background: linear-gradient(to top left, #274060 0%, #FFFFFF 100%); */
+    box-shadow: 1px 1px 3px 3px rgb(208, 202, 202);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.imageStyle{
+    width: 34px;
+    height: 34px;
+    border: 1px transparent grey;
+    border-radius: 30px;
 }

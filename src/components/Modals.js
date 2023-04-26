@@ -120,15 +120,15 @@ const Modals = () => {
                   <Form.Label className='px-1'>Label</Form.Label>
                   <span className='right'>{textAreaCount}/250</span>
                 </div>
-                <Form.Control as="textarea" disabled={disable} onChange={recalculate} rows={5} />
+                <Form.Control as="textarea" onChange={recalculate} rows={5} />
               </Form.Group>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button className='modalOneBtn' variant="info  fw-bold" onClick={handleClose}>
+            <Button className='modalOneBtn p-2' variant="info  fw-bold" onClick={handleClose}>
               Discard
             </Button>
-            <Button className='modalOneBtn' variant="primary fw-bold" onClick={handleShow2}>
+            <Button className='modalOneBtn p-2' disabled={disable} variant="primary fw-bold" onClick={handleShow2}>
               Send
             </Button>
           </Modal.Footer>
