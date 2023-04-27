@@ -180,7 +180,87 @@
     width: 120px;
     height: 5px;
     margin: 7px 0px 0px 15px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.903);
+    border-radius: 10px;
+    animation: progress-bar 2s ease-in-out forwards;
+}
+
+.progress-baro {
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    border-radius: 10px;
+    animation: progress-bar 2s ease-in-out forwards;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    animation: progress-bar 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.progress-bar-1 {
+    background-color: red;
+    animation-name: progress-bar-1;
+    width: 80%; /* set width to 80% for progress bar 1 */
+}
+  
+.progress-bar-2 {
+    background-color: rgb(6, 238, 6);
+    animation-name: progress-bar-2;
+    width: 70%; /* set width to 60% for progress bar 2 */
+}
+
+.progress-bar-3 {
+    background-color: rgba(249, 253, 26, 0.916);
+    animation-name: progress-bar-3;
+    width: 90%; /* set width to 60% for progress bar 2 */
+}
+
+@keyframes progress-bar-1 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  
+@keyframes progress-bar-2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes progress-bar-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+/* @keyframes progress-bar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 80%;
+    }
+}  */
 
 .floatR{
     margin: 4px 0px ;
@@ -240,10 +320,15 @@ input::-webkit-datetime-edit {
 }
 
 .dateCard1{
-    margin: 0px 0px;
+    margin: 0px 20px 0px -10px;
     /* width: 430px; */
-    padding: 5px 5px 5px 15px;
+    padding: 5px 0px 0px 10px;
     
+}
+
+.border{
+    border-radius: 10px;
+    transition: 2ms;
 }
 
 .dateCard .card{
@@ -286,7 +371,7 @@ h4{
 
 .callVideo{
     float: right;
-    padding-left: 10%;
+    padding-left: 17px;
     margin-top: 5px;
 }
 
@@ -295,6 +380,7 @@ h4{
     padding:10px;
     width: 38px;
     height: 38px;
+    
 }
 
 .callVideo svg:hover{

@@ -1,0 +1,80 @@
+[
+  {
+    "date": "27-04-23",
+    "meets": [
+      {
+        "meetWith": "Matt Donovan",
+        "time": "10:30"
+      },
+      {
+        "meetWith": "Jeremy Gilbert",
+        "time": "17:30"
+      },
+      {
+        "meetWith": "Alaric Saltzman",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "date": "28-04-23",
+    "meets": [
+      {
+        "meetWith": "Eliajh Mikaelson",
+        "time": "11:30"
+      },
+      {
+        "meetWith": "Rebekah Mikaelson",
+        "time": "13:30"
+      }
+    ]
+  },
+  {
+    "date": "29-04-23",
+    "meets": [
+      {
+        "meetWith": "Niklaus Mikaelson",
+        "time": "16:30"
+      }
+    ]
+  },
+  {
+    "date": "30-04-23",
+    "meets": [
+      {
+        "meetWith": "Tyler Lockwood",
+        "time": "16:30"
+      },
+      {
+        "meetWith": "Caroline Forbes",
+        "time": "17:30"
+      }
+    ]
+  },
+  {
+    "date": "01-05-23",
+    "meets": [
+      {
+        "meetWith": "Damon Salvatore",
+        "time": "16:30"
+      },
+      {
+        "meetWith": "Stefan Salvatore",
+        "time": "17:30"
+      }
+    ]
+  },
+  {
+    "date": "02-05-23",
+    "meets": [
+      {
+        "meetWith": "Elena Gilbert",
+        "time": "13:30"
+      },
+      {
+        "meetWith": "Bonnie Bennett",
+        "time": "17:30"
+      }
+    ]
+  }
+]

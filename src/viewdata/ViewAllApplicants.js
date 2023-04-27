@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import Table from 'react-bootstrap/esm/Table';
+import axios from 'axios';
 
 
 const ViewAllApplicants = () => {
@@ -8,6 +9,22 @@ const ViewAllApplicants = () => {
   const goBack = () => {
     navigate(-1);
   }
+
+  const [applicants, setApplicants] = useState(null);
+  useEffect(() => {
+    async function fetchData() {
+      await axios.get("http://localhost:8082/applicant/getAll").then(
+        response => {
+          console.log(response.data);
+          setApplicants(response.data);
+        }
+      ).catch(
+        error => console.log(error)
+      );
+    }
+    fetchData();
+  }, []);
+
 
   return (
     <div>
@@ -71,37 +88,39 @@ const ViewAllApplicants = () => {
         </div>
 
         <div className='row mx-3 mt-1 tableHeader'>
-          <Table className='table table-hover' striped hover size="md">
+          <Table className='table table-hover mt-4' striped hover size="md">
             <thead>
               <tr >
-                <th>Policy Owner</th>
-                <th className='colsize'>Life Insured</th>
+                <th></th>
+                <th className='colsize px-3'>Application No.</th>
+                <th className='colsize'>Policy Owner</th>
+                <th>Life Insured</th>
                 <th>Prd Type</th>
-                <th>Application No.</th>
                 <th>Date</th>
                 <th>SA</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              {/* {
-                leads !== null
+              {
+                applicants !== null
                   ?
-                  leads.map((data, ind) => {
+                  applicants.map((data, ind) => {
                     return (
                       <tr key={ind}>
-                        <td className='px-4 py-1 pt-2 avatarp'><img className='imageStyle' src={imageOne} alt="sridhar"></img></td>
-                        <td>{data.name}</td>
-                        <td className='colsize'>{data.lastContacted}</td>
-                        <td>{data.product}</td>
-                        <td>{data.email}</td>
-                        <td>(+91) {data.contact}</td>
-                        <td>{data.leadStage}</td>
+                        <td></td>
+                        <td className='px-5'>{data.applicantionId}</td>
+                        <td className='px-4'>{data.policyOwner}</td>
+                        <td className='px-4'>{data.lifeInsured}</td>
+                        <td>{data.prdType}</td>
+                        <td>{data.date}</td>
+                        <td>{data.sumAssured}</td>
+                        <td>{data.status}</td>
                       </tr>
                     )
                   })
                   : null
-              } */}
+              }
             </tbody>
           </Table>
         </div>

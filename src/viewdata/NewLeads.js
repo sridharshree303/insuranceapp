@@ -111,7 +111,7 @@ const NewLeads = () => {
                       <td>{data.product}</td>
                       <td>{data.email}</td>
                       <td>(+91) {data.contact}</td>
-                      <td>{data.leadStage}</td>
+                      <td className='text-success'>{data.leadStage}</td>
                     </tr>
                   )
                 })

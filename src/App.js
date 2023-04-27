@@ -6,6 +6,8 @@ import HamBurgerMenu from './components/HamBurgerMenu';
 import ProductCatalouge from './product/ProductCatalouge';
 import NewLeads from './viewdata/NewLeads';
 import ViewAllApplicants from './viewdata/ViewAllApplicants';
+import MeetingCheck from './components/MeetingCheck';
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
               <Route path='/productcatalouge' element={<ProductCatalouge/>}/>
               <Route path='/view/newleads' element={<NewLeads/>}/>
               <Route path='/view/newapplicants' element={<ViewAllApplicants/>}/>
+              <Route path='/calender' element={<MeetingCheck/>}/>
             </Routes>
 
           </div>
