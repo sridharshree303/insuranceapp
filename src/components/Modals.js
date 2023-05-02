@@ -17,8 +17,6 @@ const Modals = () => {
   const [emails, setEmails] = useState(["SridharNaidu12018m@gmail.com", "TejasriGamidi@gamil.com", "Sridharshree303@gmail.com", "Lavanya@gmail.com"]);
   const [textAreaCount, setTextAreaCount] = React.useState(0);
   const [disable, setDisable] = React.useState(false);
-  //response and error
-  const [response, setResponse] = useState("");
   const [email, setEmail] = useState({
     geteId: 0,
     recipient: [
@@ -46,13 +44,11 @@ const Modals = () => {
     axios.post(`http://localhost:8082/sendMail`, email).then(
       res => {
         console.log(res.data);
-        setResponse(res.data);
       }
     ).then(() => {
       setShow(false)
       setShow2(true)
     }).catch(err => {
-      setResponse("");
       console.log(err);
     })
   }
