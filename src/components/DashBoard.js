@@ -92,7 +92,7 @@ const DashBoard = () => {
         <div className='row dashContent'>
             {/* ------------ Left Layout ------------------- */}
             <div><h6 className='col-12 pageHeader px-2'>DashBoard</h6></div>
-            <div className='col-8 overflow'>
+            <div className='col-12 col-lg-8 overflow'>
                 {/* ------- statics cards ---------- */}
                 <div className='row px-2'>
                     <div className='col-11 float'>
@@ -204,7 +204,7 @@ const DashBoard = () => {
             </div>
 
             {/* ----------------- Right layout --------------------------------- */}
-            <div className='col-4 px-1'>
+            <div className='col-12 col-lg-4 px-1'>
                 <div className='sizing2 card pb-3 pt-3'>
                     <h6 className="headertwo">Top Selling Products</h6>
                     <div className='floatR'>
@@ -313,6 +313,7 @@ const DashBoard = () => {
                         </div>
                     </div>
                 </div>
+
                 {/* <div className=' dateCard1 bgazure pt-3 pb-3'>
                         <div className='float row '>
                             <div className='bipeople col-1 right'>
