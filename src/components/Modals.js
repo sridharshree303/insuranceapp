@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Modal.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -7,53 +7,79 @@ import Logo from '../jsonfiles/Sent.png';
 
 import { ReactMultiEmail } from 'react-multi-email';
 import 'react-multi-email/dist/style.css';
+import axios from 'axios';
 
 
 const Modals = () => {
+
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
+  const [emails, setEmails] = useState(["SridharNaidu12018m@gmail.com", "TejasriGamidi@gamil.com", "Sridharshree303@gmail.com", "Lavanya@gmail.com"]);
+  const [textAreaCount, setTextAreaCount] = React.useState(0);
+  const [disable, setDisable] = React.useState(false);
+  //response and error
+  const [response, setResponse] = useState("");
+  const [email, setEmail] = useState({
+    geteId: 0,
+    recipient: [
+      ""
+    ],
+    msgBody: "Wish You a Very Happy Birthday",
+    subject: "Happy Birthday!",
+    attachment: ""
+  });
 
   const handleClose = () => {
     setShow(false);
     setDisable(false);
     setTextAreaCount(0);
   }
+
   const handleShow = () => setShow(true);
   const handleShow2 = () => {
-    console.log("entered");
-    setShow(false);
-    console.log("setshow false");
-    setShow2(true);
-    console.log("setshow2 true")
+    submithandler();
+  }
+
+
+
+  const submithandler = () => {
+    axios.post(`http://localhost:8082/sendMail`, email).then(
+      res => {
+        console.log(res.data);
+        setResponse(res.data);
+      }
+    ).then(() => {
+      setShow(false)
+      setShow2(true)
+    }).catch(err => {
+      setResponse("");
+      console.log(err);
+    })
   }
 
   const handleClose2 = () => {
     setShow2(false);
     setDisable(false);
     setTextAreaCount(0);
-    console.log("handleClose2");
   }
 
-  const [emails, setEmails] = useState(["SridharKolluru@gmail.com", "TejasriGamidi@gamil.com", "LavanyaBejawada@gmail.com", "LavanyaBejawada@gmail.com"]);
-  const [message, ] = useState(["Wish You a Very Happy Birthday"]);
-  // const [focused, setFocused] = React.useState(false);
-  const [textAreaCount, setTextAreaCount] = React.useState(0);
-  const [disable, setDisable] = React.useState(false);
-
-
-
-  const recalculate = (e) => {
-    // console.log("event value:", e);
-    if (e.target.value.length > 250) {
-      console.log("disabled");
+  //useffect hook
+  useEffect(() => {
+    email.recipient = emails;
+    if (email.recipient.length === 0 || email.msgBody.length > 250) {
       setDisable(true);
     } else {
-      // console.log("enabled");
       setDisable(false);
     }
-    console.log(textAreaCount);
-    setTextAreaCount(e.target.value.length);
-  };
+
+    setTextAreaCount(email.msgBody.length);
+
+  }, [emails, email, disable])
+
+  //change handler
+  const changeHandler = (e) => {
+    setEmail({ ...email, [e.target.name]: e.target.value })
+  }
 
   return (
     <>
@@ -76,8 +102,6 @@ const Modals = () => {
                     setEmails(emails);
                   }}
                   autoFocus={true}
-                  // onFocus={() => setFocused(true)}
-                  // onBlur={() => setFocused(false)}
                   getLabel={(email, index, removeEmail) => {
                     return (
                       index < 2 ?
@@ -88,7 +112,7 @@ const Modals = () => {
                           </span>
                         </div>
                         : (
-                          index === 3
+                          index === 2
                             ?
                             <div data-tag key={index}>
                               <div data-tag-item>{"+" + (emails.length - 2) + " more"}</div>
@@ -99,28 +123,27 @@ const Modals = () => {
                   }}
                 />
                 <br />
-                {/* <h4>react-multi-email value</h4>
-                <h3>Focused: {focused ? 'true' : 'false'}</h3>
-                <p>{emails.join(', ') || 'empty'}</p> */}
               </Form.Group>
+
               <Form.Group className="mb-3 px-3" controlId="exampleForm.ControlInput1">
                 <Form.Control
                   className='birthdayMessage'
                   type="text"
+                  name="subject"
+                  onChange={changeHandler}
                   placeholder="Enter message"
-                  defaultValue={message}
+                  defaultValue={email.subject}
                   autoFocus
                 />
               </Form.Group>
               <Form.Group
                 className="mb-3 px-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
+                controlId="exampleForm.ControlTextarea1">
                 <div className=' pt-2'>
                   <Form.Label className='px-1'>Label</Form.Label>
                   <span className='right'>{textAreaCount}/250</span>
                 </div>
-                <Form.Control as="textarea" onChange={recalculate} rows={5} />
+                <Form.Control as="textarea" name="msgBody" value={email.msgBody} onChange={changeHandler} rows={5} />
               </Form.Group>
             </Form>
           </Modal.Body>
@@ -143,7 +166,7 @@ const Modals = () => {
             </div>
             <div className='row mt-4 pt-1'>
               <div className='col-5'>
-                <img src={Logo} class="rounded float-left Logo" alt="..."/>
+                <img src={Logo} className="rounded float-left Logo" alt="..." />
               </div>
               <div className='col-7'>
                 <Modal.Title className='modalTwoText' >Your Birthday Wishes Has been sent.</Modal.Title>
@@ -151,7 +174,6 @@ const Modals = () => {
                   Okay Thanks !
                 </Button>
               </div>
-
             </div>
           </Modal.Body>
         </Modal> : ""
