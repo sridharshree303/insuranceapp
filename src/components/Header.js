@@ -23,7 +23,7 @@ const Header = () => {
             <div className='col-6 searchSpace left'>
                 <span className='form-input'>
                     <i className="fa fa-search" ></i>  &nbsp; &nbsp;
-                    <input type="text" className='search' placeholder="Search Keyword" />
+                    <input type="text" className='searchHeader' placeholder="Search Keyword" />
                 </span>
             </div>
             <div className='col-2 right'>

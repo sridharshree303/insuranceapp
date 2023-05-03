@@ -20,9 +20,7 @@ const ProductCatalouge = () => {
   return (
     <div>
       <div
-        className="card bghead card-body row noBorder
-            bg-warning"
-      >
+        className="card bghead card-body row noBorder bg-warning">
         <div className="mt-4 px-3">
           <h1 className="display-6 mr"> Product Catalogue</h1>
           <h6 className="mr3">Select a Product Category to view Plans</h6>
