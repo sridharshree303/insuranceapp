@@ -38,17 +38,24 @@ const Modals = () => {
     submithandler();
   }
 
-
+  const [response, setResponse] = useState("");
 
   const submithandler = () => {
     axios.post(`http://localhost:8082/sendMail`, email).then(
       res => {
+        setResponse(res.data);
         console.log(res.data);
+        console.log(response + "----");
       }
     ).then(() => {
-      setShow(false)
-      setShow2(true)
+      if (response.length > 1) {
+        setShow(false)
+        setShow2(true)
+      } else {
+        alert("Something went wrong!")
+      }
     }).catch(err => {
+      setResponse("");
       console.log(err);
     })
   }
