@@ -1,0 +1,101 @@
+.prdfloat{
+    height: 300px;
+    padding-left: 30px;
+    /* width: 300px; */
+}
+
+.prdInside{
+    width: 800px;
+}
+
+.bghead{
+    background-image: url('../jsonfiles//travel.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mr{
+    text-align: left;
+    font-weight: unset;
+    font-size: 30px;
+    margin-top: 30px;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.mr2{
+    text-align: left;
+    font-weight: unset;
+    font-size: 30px;
+    margin-top: 30px;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.mr3{
+    text-align: left;
+    font-weight: unset;
+    font-size: 17px;
+    padding-left: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mr4{
+    text-align: left;
+    font-weight: unset;
+    font-size: 17px;
+    padding-left: 20px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search{
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 1 1 -2 -2 gray;
+    border: 2px grey;
+    margin: 10px 0px 30px 10px;
+    
+}
+
+.button{
+    background-color: rgb(28, 173, 226);
+    border-radius: 20px;
+    width: 140px;
+    height: 42px;
+    color: whitesmoke;
+    margin:10px 0px 30px 30px;
+    font-weight: bold;
+}
+
+.cardRound{
+    border-radius: 15px;
+    /* width: 30px; */
+}
+
+.cardRounds{
+    border-radius: 15px;
+    width: 200px;
+}
+
+.font{
+    font-weight: bold;
+}
+
+.buttons{
+    background-color: rgb(28, 173, 226);
+    border-radius: 15px;
+    width: 100px;
+    height: 25px;
+    color: whitesmoke;
+    margin:10px 0px 30px 30px;
+    /* font-weight: bold; */
+}
